@@ -287,7 +287,7 @@ export function EstablishmentDetails() {
               </button>
               
               <a 
-                href={`https://wa.me/786541503?text=Bonjour,%20je%20m'intéresse%20à%20l'établissement%20${encodeURIComponent(establishment.name)}%20(${getTypeLabel(establishment.type)})%20à%20${establishment.location}.%20Pouvez-vous%20m'en%20dire%20plus%20?`}
+                href={`https://wa.me/711457304?text=Bonjour,%20je%20m'intéresse%20à%20l'établissement%20${encodeURIComponent(establishment.name)}%20(${getTypeLabel(establishment.type)})%20à%20${establishment.location}.%20Pouvez-vous%20m'en%20dire%20plus%20?`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all text-sm font-medium flex items-center gap-2"
@@ -566,7 +566,7 @@ export function EstablishmentDetails() {
                   ou utilisez notre service d'accompagnement gratuit.
                 </p>
                 <a 
-                  href={`https://wa.me/786541503?text=Bonjour,%20je%20souhaite%20m'inscrire%20à%20${encodeURIComponent(establishment.name)}%20et%20j'ai%20besoin%20d'aide%20pour%20les%20démarches%20d'inscription.`}
+                  href={`https://wa.me/711457304?text=Bonjour,%20je%20souhaite%20m'inscrire%20à%20${encodeURIComponent(establishment.name)}%20et%20j'ai%20besoin%20d'aide%20pour%20les%20démarches%20d'inscription.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:shadow-lg transition-all flex items-center gap-2 justify-center"
@@ -805,7 +805,7 @@ export function EstablishmentDetails() {
               Notre équipe d'experts peut vous accompagner dans toutes vos démarches d'inscription.
             </p>
             <a 
-              href={`https://wa.me/786541503?text=Bonjour,%20je%20souhaite%20postuler%20à%20${encodeURIComponent(establishment.name)}%20et%20j'aimerais%20bénéficier%20d'un%20accompagnement%20personnalisé.`}
+              href={`https://wa.me/711457304?text=Bonjour,%20je%20souhaite%20postuler%20à%20${encodeURIComponent(establishment.name)}%20et%20j'aimerais%20bénéficier%20d'un%20accompagnement%20personnalisé.`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-white text-blue-600 rounded-xl hover:bg-blue-50 transition-all font-medium flex items-center gap-2 justify-center"
@@ -974,7 +974,7 @@ export function EstablishmentDetails() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href={`https://wa.me/786541503?text=Bonjour,%20je%20suis%20sur%20la%20page%20de%20${encodeURIComponent(establishment.name)}%20et%20j'aimerais%20en%20savoir%20plus%20sur%20les%20admissions.`}
+              href={`https://wa.me/711457304?text=Bonjour,%20je%20suis%20sur%20la%20page%20de%20${encodeURIComponent(establishment.name)}%20et%20j'aimerais%20en%20savoir%20plus%20sur%20les%20admissions.`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:shadow-lg transition-all flex items-center gap-2"
@@ -986,7 +986,7 @@ export function EstablishmentDetails() {
             </a>
             
             <a 
-              href={`https://wa.me/786541503?text=Bonjour,%20je%20souhaite%20prendre%20un%20rendez-vous%20pour%20discuter%20de%20mon%20projet%20d'études%20à%20${encodeURIComponent(establishment.name)}.`}
+              href={`https://wa.me/711457304?text=Bonjour,%20je%20souhaite%20prendre%20un%20rendez-vous%20pour%20discuter%20de%20mon%20projet%20d'études%20à%20${encodeURIComponent(establishment.name)}.`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition-all flex items-center gap-2"

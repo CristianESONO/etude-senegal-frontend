@@ -533,12 +533,12 @@ export function StudySection() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="whatsapp://send?phone=786541503"
+              href="whatsapp://send?phone=711457304"
               onClick={(e) => {
                 // Fallback pour desktop
                 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                   e.preventDefault();
-                  window.open('https://wa.me/786541503', '_blank');
+                  window.open('https://wa.me/711457304', '_blank');
                 }
               }}
               className="px-8 py-4 bg-[#25D366] text-white rounded-xl hover:bg-[#128C7E] transition-all shadow-lg flex items-center gap-3"

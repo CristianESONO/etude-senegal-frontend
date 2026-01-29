@@ -316,7 +316,7 @@ export function FormalitiesSection() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-                href="https://wa.me/786541503?text=Bonjour,%20j'ai%20besoin%20d'aide%20pour%20les%20formalités%20administratives%20(visa%20et%20carte%20de%20séjour)%20au%20Sénégal."
+                href="https://wa.me/711457304?text=Bonjour,%20j'ai%20besoin%20d'aide%20pour%20les%20formalités%20administratives%20(visa%20et%20carte%20de%20séjour)%20au%20Sénégal."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-blue-600 rounded-xl hover:bg-blue-50 transition-all shadow-lg flex items-center gap-3 font-medium"
