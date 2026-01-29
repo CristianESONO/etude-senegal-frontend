@@ -18,7 +18,7 @@ export function Footer() {
       { label: 'Mentions légales', href: '#' },
       { label: 'Politique de confidentialité', href: '#' },
       { label: 'Conditions d\'utilisation', href: '#' },
-      { label: 'Contact', href: 'mailto:contact@etudesenegal.sn' },
+      { label: 'Contact', href: 'mailto:lebadilassistance@gmail.com' },
     ],
   };
 
@@ -59,8 +59,8 @@ export function Footer() {
     },
     {
       icon: Mail,
-      text: 'contact@etudesenegal.sn',
-      href: 'mailto:contact@etudesenegal.sn'
+      text: 'lebadilassistance@gmail.com',
+      href: 'mailto:lebadilassistance@gmail.com'
     }
   ];
 
