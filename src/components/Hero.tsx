@@ -729,8 +729,8 @@ export function Hero({ setActiveSection }: HeroProps) {
                   className="relative rounded-2xl overflow-hidden shadow-2xl mt-8"
                 >
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1758611971095-87f590f8c4ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzdHVkZW50JTIwYXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MXx8fHwxNzY5Nzk4NDc4fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Logement"
+                    src="/assets/etudiants.jpg"
+                    alt="Étudiants dans un logement"
                     className="w-full h-64 object-cover"
                   />
                 </motion.div>
