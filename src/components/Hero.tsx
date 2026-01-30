@@ -729,7 +729,7 @@ export function Hero({ setActiveSection }: HeroProps) {
                   className="relative rounded-2xl overflow-hidden shadow-2xl mt-8"
                 >
                   <ImageWithFallback
-                    src="/assets/etudiants.jpg"
+                    src="/assets/etudiants.jpeg"
                     alt="Étudiants dans un logement"
                     className="w-full h-64 object-cover"
                   />
