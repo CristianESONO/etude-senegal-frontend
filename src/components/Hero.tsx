@@ -712,7 +712,7 @@ export function Hero({ setActiveSection }: HeroProps) {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="grid grid-cols-2 gap-4">
+             <div className="grid grid-cols-2 gap-4">
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: -2 }}
                   className="relative rounded-2xl overflow-hidden shadow-2xl"
@@ -729,7 +729,7 @@ export function Hero({ setActiveSection }: HeroProps) {
                   className="relative rounded-2xl overflow-hidden shadow-2xl mt-8"
                 >
                   <ImageWithFallback
-                    src="/assets/etudiants.jpeg"
+                    src="./assets/etudiants.jpeg"  // Notez le point avant /
                     alt="Étudiants dans un logement"
                     className="w-full h-64 object-cover"
                   />
