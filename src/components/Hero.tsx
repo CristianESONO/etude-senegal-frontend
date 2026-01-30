@@ -119,7 +119,7 @@ export function Hero({ setActiveSection }: HeroProps) {
       description: 'Découvrez les établissements supérieurs reconnus par le CAMES',
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'from-blue-600/90 to-cyan-600/90',
-      image: 'https://images.unsplash.com/photo-1638636214032-581196ffd400?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwc3R1ZGVudHMlMjB1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDF8fHx8MTc2OTc5ODA2Nnww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/assets/ucad.jpg',
       emoji: '🎓',
     },
     {
@@ -129,7 +129,7 @@ export function Hero({ setActiveSection }: HeroProps) {
       description: 'Visa étranger, carte de séjour et démarches administratives',
       color: 'from-indigo-500 to-purple-500',
       bgColor: 'from-indigo-600/90 to-purple-600/90',
-      image: 'https://images.unsplash.com/photo-1758928807847-ed94f9ed3cad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXNhJTIwcGFzc3BvcnQlMjBkb2N1bWVudHN8ZW58MXx8fHwxNzY5Nzk4MDY4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/assets/passeport.jpeg',
       emoji: '📋',
     },
     {
@@ -139,7 +139,7 @@ export function Hero({ setActiveSection }: HeroProps) {
       description: 'Trouvez votre logement étudiant au Sénégal',
       color: 'from-purple-500 to-pink-500',
       bgColor: 'from-purple-600/90 to-pink-600/90',
-      image: 'https://images.unsplash.com/photo-1765401814021-418904254ef4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMGFwYXJ0bWVudCUyMGJ1aWxkaW5nJTIwbW9kZXJufGVufDF8fHx8MTc2OTc5ODA2OHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/assets/logement.jpg',
       emoji: '🏠',
     },
   ];
