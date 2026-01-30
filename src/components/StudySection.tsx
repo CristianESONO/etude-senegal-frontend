@@ -305,35 +305,35 @@ export function StudySection() {
           </div>
         </div>
 
-        {/* Hero Image */}
+        {/* Hero Image - MODIFIÉ */}
         <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1638636214032-581196ffd400?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwdW5pdmVyc2l0eSUyMHN0dWRlbnRzfGVufDF8fHx8MTc2NjIyNDMzNXww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Étudiants universitaires"
+            src="/assets/ucad.jpg"
+            alt="Université Cheikh Anta Diop (UCAD)"
             className="w-full h-96 object-cover"
           />
         </div>
 
-        {/* CAMES Recognition Badge */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6 mb-16">
-          <div className="flex items-start gap-4">
-            <div className="bg-green-500 p-3 rounded-lg">
-              <CheckCircle2 className="text-white" size={24} />
+        {/* CAMES Recognition Badge - MODIFIÉ POUR ÊTRE RESPONSIVE */}
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-4 sm:p-6 mb-16">
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <div className="bg-green-500 p-2 sm:p-3 rounded-lg self-center sm:self-start">
+              <CheckCircle2 className="text-white w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <h3 className="text-xl text-gray-900 mb-2">Reconnaissance CAMES</h3>
-              <p className="text-gray-700">
+            <div className="flex-1 text-center sm:text-left">
+              <h3 className="text-lg sm:text-xl text-gray-900 mb-2">Reconnaissance CAMES</h3>
+              <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-0">
                 Tous les établissements listés sont reconnus par le Conseil Africain et Malgache pour l'Enseignement Supérieur (CAMES), 
                 garantissant la qualité et la reconnaissance internationale de vos diplômes.
               </p>
-              <div className="mt-4 flex gap-4 text-sm">
-                <div className="bg-white px-3 py-2 rounded-lg border">
+              <div className="mt-4 flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 text-xs sm:text-sm">
+                <div className="bg-white px-3 py-1 sm:py-2 rounded-lg border min-w-[80px] sm:min-w-0">
                   <span className="font-medium">{universitiesCount}</span> universités
                 </div>
-                <div className="bg-white px-3 py-2 rounded-lg border">
+                <div className="bg-white px-3 py-1 sm:py-2 rounded-lg border min-w-[80px] sm:min-w-0">
                   <span className="font-medium">{schoolsCount}</span> écoles supérieures
                 </div>
-                <div className="bg-white px-3 py-2 rounded-lg border">
+                <div className="bg-white px-3 py-1 sm:py-2 rounded-lg border min-w-[80px] sm:min-w-0">
                   <span className="font-medium">{institutesCount}</span> instituts
                 </div>
               </div>
