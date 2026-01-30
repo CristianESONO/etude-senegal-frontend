@@ -717,9 +717,9 @@ export function Hero({ setActiveSection }: HeroProps) {
                   whileHover={{ scale: 1.05, rotate: -2 }}
                   className="relative rounded-2xl overflow-hidden shadow-2xl"
                 >
-                   <img
-                    src="/assets/etudiants.jpg"
-                    alt="Étudiants dans un logement"
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1764145144753-922ae256714b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWJyYW50JTIwYWZyaWNhbiUyMGN1bHR1cmUlMjBmZXN0aXZhbHxlbnwxfHx8fDE3Njk3OTg0Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                    alt="Culture"
                     className="w-full h-64 object-cover"
                   />
                 </motion.div>
@@ -729,7 +729,7 @@ export function Hero({ setActiveSection }: HeroProps) {
                   className="relative rounded-2xl overflow-hidden shadow-2xl mt-8"
                 >
                   <ImageWithFallback
-                    src="/assets/etudiants.jpg"
+                    src="https://etude-senegal-frontend.vercel.app/assets/etudiants.jpg"
                     alt="Étudiants dans un logement"
                     className="w-full h-64 object-cover"
                   />
