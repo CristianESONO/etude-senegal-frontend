@@ -139,7 +139,7 @@ export function FormalitiesSection() {
     {/* Hero Image */}
     <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
       <ImageWithFallback
-        src="/assets/passeport.avif"
+        src="/assets/passeport.jpeg"
         alt="Portrait homme noir africain"
         className="w-full h-96 object-cover"
       />

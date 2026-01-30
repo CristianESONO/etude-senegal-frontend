@@ -219,52 +219,52 @@ export function StudySection() {
   const endIndex = Math.min(currentPage * limit, totalEstablishments);
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl text-gray-900 mb-4">Étudier au Sénégal</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 mb-4">Étudier au Sénégal</h1>
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             Découvrez les établissements d'enseignement supérieur reconnus par le CAMES
           </p>
           
           {!loading && !error && (
-            <div className="mt-4 text-sm text-gray-500">
+            <div className="mt-4 text-xs sm:text-sm text-gray-500">
               {totalEstablishments} établissements disponibles • Page {currentPage}/{totalPages}
             </div>
           )}
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 mb-12">
+        <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 mb-8 sm:mb-12">
           {/* Search Bar */}
-          <div className="relative mb-6">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+          <div className="relative mb-4 sm:mb-6">
+            <Search className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 sm:w-5 sm:h-5" />
             <input
               type="text"
               placeholder="Rechercher un établissement, une ville..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none text-gray-900"
+              className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 border border-gray-300 sm:border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-blue-500 focus:outline-none text-gray-900 text-sm sm:text-base"
               disabled={loading}
             />
             {loading && (
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                <Loader2 className="animate-spin text-blue-500" size={20} />
+              <div className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2">
+                <Loader2 className="animate-spin text-blue-500 w-4 h-4 sm:w-5 sm:h-5" />
               </div>
             )}
           </div>
 
           {/* Filters */}
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <div className="flex-1">
-              <label className="block text-sm text-gray-600 mb-2">Type d'établissement</label>
+              <label className="block text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">Type d'établissement</label>
               <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-3 h-3 sm:w-4 sm:h-4" />
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-gray-900 bg-white"
+                  className="w-full pl-8 sm:pl-10 pr-4 py-2 sm:py-3 border border-gray-300 sm:border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-gray-900 bg-white text-sm sm:text-base"
                   disabled={loading}
                 >
                   <option value="all">Tous les types</option>
@@ -276,13 +276,13 @@ export function StudySection() {
             </div>
 
             <div className="flex-1">
-              <label className="block text-sm text-gray-600 mb-2">Ville</label>
+              <label className="block text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">Ville</label>
               <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-3 h-3 sm:w-4 sm:h-4" />
                 <select
                   value={selectedCity}
                   onChange={(e) => setSelectedCity(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-gray-900 bg-white"
+                  className="w-full pl-8 sm:pl-10 pr-4 py-2 sm:py-3 border border-gray-300 sm:border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-gray-900 bg-white text-sm sm:text-base"
                   disabled={loading}
                 >
                   <option value="all">Toutes les villes</option>
@@ -295,10 +295,10 @@ export function StudySection() {
           </div>
 
           {/* Results Count */}
-          <div className="mt-4 text-gray-600">
+          <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600">
             <span className="text-blue-600 font-medium">{totalEstablishments}</span> établissement(s) au total
             {searchQuery || selectedType !== 'all' || selectedCity !== 'all' ? (
-              <span className="text-sm text-gray-500 ml-2">
+              <span className="text-xs text-gray-500 ml-1 sm:ml-2">
                 (filtres actifs)
               </span>
             ) : null}
@@ -306,16 +306,16 @@ export function StudySection() {
         </div>
 
         {/* Hero Image - MODIFIÉ */}
-        <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="mb-8 sm:mb-16 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl">
           <ImageWithFallback
             src="/assets/ucad.jpg"
             alt="Université Cheikh Anta Diop (UCAD)"
-            className="w-full h-96 object-cover"
+            className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
           />
         </div>
 
         {/* CAMES Recognition Badge - MODIFIÉ POUR ÊTRE RESPONSIVE */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-4 sm:p-6 mb-16">
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-4 sm:p-6 mb-8 sm:mb-16">
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <div className="bg-green-500 p-2 sm:p-3 rounded-lg self-center sm:self-start">
               <CheckCircle2 className="text-white w-5 h-5 sm:w-6 sm:h-6" />
@@ -342,37 +342,37 @@ export function StudySection() {
         </div>
 
         {/* Establishments Grid */}
-        <div className="mb-16">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl text-gray-900">Liste des établissements</h2>
-            <div className="text-gray-600">
+        <div className="mb-8 sm:mb-16">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-2 sm:gap-0">
+            <h2 className="text-2xl sm:text-3xl text-gray-900">Liste des établissements</h2>
+            <div className="text-sm sm:text-base text-gray-600">
               Affichage <span className="font-medium text-blue-600">{startIndex}-{endIndex}</span> sur {totalEstablishments}
             </div>
           </div>
           
           {loading ? (
-            <div className="text-center py-16">
-              <Loader2 className="animate-spin mx-auto text-blue-500 mb-4" size={48} />
-              <p className="text-xl text-gray-600">Chargement des établissements...</p>
-              <p className="text-gray-400 mt-2">Page {currentPage} sur {totalPages}</p>
+            <div className="text-center py-12 sm:py-16">
+              <Loader2 className="animate-spin mx-auto text-blue-500 mb-4 w-10 h-10 sm:w-12 sm:h-12" />
+              <p className="text-base sm:text-xl text-gray-600">Chargement des établissements...</p>
+              <p className="text-xs sm:text-sm text-gray-400 mt-2">Page {currentPage} sur {totalPages}</p>
             </div>
           ) : error ? (
-            <div className="text-center py-16 bg-amber-50 rounded-2xl border-2 border-amber-200">
-              <div className="text-amber-600 mb-4">⚠️</div>
-              <p className="text-xl text-gray-900 mb-2">Mode hors ligne activé</p>
-              <p className="text-gray-600 mb-4">{error}</p>
-              <p className="text-gray-500 text-sm">Vous visualisez des données statiques de démonstration.</p>
+            <div className="text-center py-12 sm:py-16 bg-amber-50 rounded-xl sm:rounded-2xl border-2 border-amber-200 p-4 sm:p-6">
+              <div className="text-amber-600 mb-4 text-2xl">⚠️</div>
+              <p className="text-lg sm:text-xl text-gray-900 mb-2">Mode hors ligne activé</p>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">{error}</p>
+              <p className="text-xs sm:text-sm text-gray-500">Vous visualisez des données statiques de démonstration.</p>
               <button
                 onClick={() => window.location.reload()}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base"
               >
                 Réessayer la connexion
               </button>
             </div>
           ) : establishments.length === 0 ? (
-            <div className="text-center py-16 bg-gray-50 rounded-2xl">
-              <p className="text-xl text-gray-500">Aucun établissement trouvé</p>
-              <p className="text-gray-400 mt-2">Essayez de modifier vos critères de recherche</p>
+            <div className="text-center py-12 sm:py-16 bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+              <p className="text-lg sm:text-xl text-gray-500">Aucun établissement trouvé</p>
+              <p className="text-sm sm:text-base text-gray-400 mt-2">Essayez de modifier vos critères de recherche</p>
               {searchQuery || selectedType !== 'all' || selectedCity !== 'all' ? (
                 <button
                   onClick={() => {
@@ -380,7 +380,7 @@ export function StudySection() {
                     setSelectedType('all');
                     setSelectedCity('all');
                   }}
-                  className="mt-4 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+                  className="mt-4 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-sm sm:text-base"
                 >
                   Réinitialiser les filtres
                 </button>
@@ -388,7 +388,7 @@ export function StudySection() {
             </div>
           ) : (
             <>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 {establishments.map((establishment) => {
                   const typeInfo = getTypeInfo(establishment.type);
                   const Icon = typeInfo?.icon || Building2;
@@ -396,36 +396,36 @@ export function StudySection() {
                   return (
                     <div
                       key={establishment.id}
-                      className="bg-white border-2 border-gray-100 rounded-xl p-6 hover:border-blue-200 hover:shadow-xl transition-all group"
+                      className="bg-white border border-gray-200 sm:border-2 border-gray-100 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:border-blue-200 hover:shadow-lg sm:hover:shadow-xl transition-all group"
                     >
-                      <div className={`bg-gradient-to-r ${typeInfo?.color} w-14 h-14 rounded-xl flex items-center justify-center mb-4`}>
-                        <Icon className="text-white" size={24} />
+                      <div className={`bg-gradient-to-r ${typeInfo?.color} w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4`}>
+                        <Icon className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       
-                      <h3 className="text-lg text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-base sm:text-lg text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
                         {establishment.name}
                       </h3>
                       
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center gap-2 text-gray-600">
-                          <MapPin size={16} className="text-blue-500" />
+                      <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
+                        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                          <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
                           <span>{establishment.location}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-600">
-                          <Users size={16} className="text-indigo-500" />
+                        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                          <Users className="w-3 h-3 sm:w-4 sm:h-4 text-indigo-500" />
                           <span>{establishment.students} étudiants</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-600">
-                          <BookOpen size={16} className="text-purple-500" />
+                        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                          <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 text-purple-500" />
                           <span>{establishment.programs} programmes</span>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Star size={16} className="text-yellow-500 fill-yellow-500" />
-                          <span className="text-gray-900">{establishment.rating.toFixed(1)}/5</span>
+                        <div className="flex items-center gap-1.5 sm:gap-2">
+                          <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 fill-yellow-500" />
+                          <span className="text-xs sm:text-sm text-gray-900">{establishment.rating.toFixed(1)}/5</span>
                         </div>
                         {establishment.isCAMESRecognized && (
-                          <div className="flex items-center gap-2 text-green-600 text-sm">
-                            <CheckCircle2 size={14} />
+                          <div className="flex items-center gap-1.5 sm:gap-2 text-green-600 text-xs sm:text-sm">
+                            <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4" />
                             <span>Reconnu CAMES</span>
                           </div>
                         )}
@@ -437,7 +437,7 @@ export function StudySection() {
                             // Redirection vers la page de détails
                             window.location.href = `/etablissements/${establishment.id}`;
                           }}
-                          className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all"
+                          className="flex-1 px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all text-xs sm:text-sm"
                         >
                           Voir détails
                         </button>
@@ -446,9 +446,9 @@ export function StudySection() {
                             // Ajouter aux favoris (à implémenter plus tard)
                             console.log('Ajouter aux favoris:', establishment.id);
                           }}
-                          className="px-4 py-2 border-2 border-blue-200 text-blue-600 rounded-lg hover:bg-blue-50 transition-all"
+                          className="px-3 sm:px-4 py-2 border border-blue-200 sm:border-2 border-blue-200 text-blue-600 rounded-lg hover:bg-blue-50 transition-all"
                         >
-                          <Star size={18} />
+                          <Star className="w-4 h-4 sm:w-5 sm:h-5" />
                         </button>
                       </div>
                     </div>
@@ -458,38 +458,38 @@ export function StudySection() {
 
               {/* PAGINATION CONTROLS */}
               {totalPages > 1 && (
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-12 pt-8 border-t border-gray-200">
-                  <div className="text-gray-600">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
+                  <div className="text-xs sm:text-sm text-gray-600">
                     Page {currentPage} sur {totalPages} • {totalEstablishments} établissements
                   </div>
                   
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 sm:gap-2">
                     {/* Bouton précédent */}
                     <button
                       onClick={handlePrevPage}
                       disabled={currentPage === 1}
-                      className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
+                      className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg flex items-center gap-1 sm:gap-2 text-xs sm:text-sm ${
                         currentPage === 1
                           ? 'text-gray-400 cursor-not-allowed'
                           : 'text-blue-600 hover:bg-blue-50'
                       }`}
                     >
-                      <ChevronLeft size={18} />
+                      <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
                       Précédent
                     </button>
 
                     {/* Numéros de page */}
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-0.5 sm:gap-1">
                       {getPageNumbers().map((pageNumber, index) => (
                         pageNumber === '...' ? (
-                          <span key={`ellipsis-${index}`} className="px-2 text-gray-400">
+                          <span key={`ellipsis-${index}`} className="px-1 sm:px-2 text-xs sm:text-sm text-gray-400">
                             ...
                           </span>
                         ) : (
                           <button
                             key={pageNumber}
                             onClick={() => handlePageClick(pageNumber as number)}
-                            className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                            className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center text-xs sm:text-sm ${
                               currentPage === pageNumber
                                 ? 'bg-blue-600 text-white'
                                 : 'text-gray-700 hover:bg-gray-100'
@@ -505,18 +505,18 @@ export function StudySection() {
                     <button
                       onClick={handleNextPage}
                       disabled={currentPage === totalPages}
-                      className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
+                      className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg flex items-center gap-1 sm:gap-2 text-xs sm:text-sm ${
                         currentPage === totalPages
                           ? 'text-gray-400 cursor-not-allowed'
                           : 'text-blue-600 hover:bg-blue-50'
                       }`}
                     >
                       Suivant
-                      <ChevronRight size={18} />
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                     </button>
                   </div>
                   
-                  <div className="text-sm text-gray-500">
+                  <div className="text-xs sm:text-sm text-gray-500">
                     {limit} établissements par page
                   </div>
                 </div>
@@ -526,12 +526,12 @@ export function StudySection() {
         </div>
 
        {/* Call to Action */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-center text-white">
-          <h2 className="text-3xl mb-4">Prêt à commencer votre parcours académique ?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        <div className="mt-8 sm:mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 text-center text-white">
+          <h2 className="text-xl sm:text-2xl md:text-3xl mb-3 sm:mb-4">Prêt à commencer votre parcours académique ?</h2>
+          <p className="text-sm sm:text-base md:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
             Contactez-nous pour plus d'informations sur les admissions et les programmes disponibles
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a 
               href="whatsapp://send?phone=711457304"
               onClick={(e) => {
@@ -541,10 +541,10 @@ export function StudySection() {
                   window.open('https://wa.me/711457304', '_blank');
                 }
               }}
-              className="px-8 py-4 bg-[#25D366] text-white rounded-xl hover:bg-[#128C7E] transition-all shadow-lg flex items-center gap-3"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-[#25D366] text-white rounded-lg sm:rounded-xl hover:bg-[#128C7E] transition-all shadow-lg flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base"
             >
               {/* Icône WhatsApp */}
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.032 0c-6.626 0-12 5.372-12 12 0 2.126.553 4.144 1.527 5.946l-1.458 5.383 5.524-1.458c1.757.951 3.756 1.465 5.894 1.465 6.627 0 12-5.372 12-12s-5.373-12-12-12zm5.633 17.018c-.329.925-1.61 1.689-2.635 1.761-.815.057-1.839-.205-3.475-.75-2.373-.795-4.294-2.857-4.855-5.116-.374-1.506.022-2.758.824-3.642.467-.514 1.12-.803 1.814-.803.246 0 .486.039.705.113.374.125.714.428.936.811.329.577.369.738.722 1.353.277.479.466.86.668 1.176.21.33.425.669.63.949.229.309.464.64.766.94.301.299.593.446.973.446.146 0 .29-.019.429-.057.773-.21 1.462-.925 1.69-1.699.21-.725.084-1.34-.374-1.861-.319-.366-.738-.596-1.169-.596-.146 0-.291.039-.425.113-.104.057-.192.104-.291.104-.126 0-.317-.15-.483-.33-.41-.442-.75-1.028-1.048-1.703-.226-.524-.016-1.297.525-1.716.301-.236.648-.354.997-.354 1.247 0 2.326.842 2.782 1.923.374.876.412 1.89.105 2.817z"/>
               </svg>
               Nous contacter
@@ -552,7 +552,7 @@ export function StudySection() {
             {totalEstablishments > 0 && (
               <button 
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="px-8 py-4 bg-blue-700 text-white rounded-xl hover:bg-blue-800 transition-all"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-blue-700 text-white rounded-lg sm:rounded-xl hover:bg-blue-800 transition-all text-sm sm:text-base"
               >
                 Voir tous les établissements
               </button>
